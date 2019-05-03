@@ -1,4 +1,4 @@
-# Lazypt
+# Lazypt v0.1
 
 Lazypt is a simple Python program that pastes to your clipboard some common penetration testing commands.
 
