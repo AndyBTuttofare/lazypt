@@ -1,0 +1,53 @@
+---
+- ossl1:
+    info: Command to generate a Private Key and a CSR
+    cmd: openssl req -newkey rsa:2048 -nodes -keyout domain.key -out domain.csr
+    code: openssl req -newkey rsa:2048 -nodes -keyout {} -out {}
+- ossl2:
+    info: Command to generate a CSR from an Existing Private Key
+    cmd: openssl req -key private.key -new -out domain.csr
+    code: openssl req -key {} -new -out {}
+- ossl3:
+    info: Command to generate a CSR from an Existing Certificate and Private Key
+    cmd: openssl x509 -in domain.crt -signkey private.key -x509toreq -out domain.csr
+    code: openssl x509 -in {} -signkey {} -x509toreq -out {}
+- ossl4:
+    info: Command to generate a Self-Signed Certificate
+    cmd: openssl req -newkey rsa:2048 -nodes -keyout domain.key -x509 -days 365 -out domain.crt
+    code: openssl req -newkey rsa:2048 -nodes -keyout {} -x509 -days 365 -out {}
+- ossl5:
+    info: Command to generate a Self-Signed Certificate from an Existing Private Key
+    cmd: openssl req -key private.key -new -x509 -days 365 -out domain.crt
+    code: openssl req -key {} -new -x509 -days 365 -out {}
+- ossl6:
+    info: Command to generate a Self-Signed Certificate from an Existing Private Key and CSR
+    cmd: openssl x509 -signkey private.key -in domain.csr -req -days 365 -out domain.crt
+    code: openssl x509 -signkey {} -in {} -req -days 365 -out {}
+- ossl7:
+    info: Command to convert PEM to DER
+    cmd: openssl x509 -in domain.crt -outform der -out domain.der
+    code: openssl x509 -in {} -outform der -out {}
+- ossl8:
+    info: Command to convert DER to PEM
+    cmd: openssl x509 -inform der -in domain.der -out domain.crt
+    code: openssl x509 -inform der -in {} -out {}
+- ossl9:
+    info: Command to convert PEM to PKCS7
+    cmd: openssl crl2pkcs7 -nocrl -certfile domain.crt -certfile ca-chain.crt -out domain.p7b
+    code: openssl crl2pkcs7 -nocrl -certfile {} -certfile {} -out {}
+- ossl10:
+    info: Command to convert PKCS7 to PEM
+    cmd: openssl pkcs7 -in domain.p7b -print_certs -out domain.crt
+    code: openssl pkcs7 -in {} -print_certs -out {}
+- ossl11:
+    info: Command to convert PEM to PKCS12
+    cmd: openssl pkcs12 -inkey domain.key -in domain.crt -export -out domain.pfx
+    code: openssl pkcs12 -inkey {} -in {} -export -out {}
+- ossl12:
+    info: Command to convert PKCS12 to PEM
+    cmd: openssl pkcs12 -in domain.pfx -nodes -out domain.combined.crt
+    code: openssl pkcs12 -in {} -nodes -out {}
+
+
+
+    
