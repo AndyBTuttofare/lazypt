@@ -63,7 +63,7 @@ The following reverse shell commands are available. They can be expanded with yo
 ## Installation
 
 ```bash
-git clone https://
+git clone https://github.com/AndyBTuttofare/lazypt.git
 cd lazypt
 python setup.py install
 ```
