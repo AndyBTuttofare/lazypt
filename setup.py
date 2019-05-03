@@ -5,7 +5,8 @@ setup(
       version="0.1",
       author_email="moonx2006@gmail.com",
       packages=['lazypt'],
-      package_data={},
+      include_package_data=True,
+      package_data={'yaml':['*']},
       license='MIT',
       install_requires=['click', 'pyperclip', 'pyyaml'],
       entry_points={
