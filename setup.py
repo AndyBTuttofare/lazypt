@@ -6,7 +6,7 @@ setup(
       author_email="moonx2006@gmail.com",
       packages=['lazypt'],
       package_data={},
-      license='MIT'
+      license='MIT',
       install_requires=['click', 'pyperclip', 'pyyaml'],
       entry_points={
         'console_scripts': ['lazypt = lazypt.cli:commands']
