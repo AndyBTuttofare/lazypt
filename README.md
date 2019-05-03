@@ -41,19 +41,19 @@ place {} where you want to put LHOST and LPORT passed to the program as args.
 
 
 ### OpenSSL cheatsheet
-The following reverse shell commands are available. They can be expanded with your custom cheatsheet by editing the file revshell.yaml
-- Generate a Private Key and a CSR
-- Generate a CSR from an Existing Private Key 
-- Generate a CSR from an Existing Certificate and Private Key
-- Generate a Self-Signed Certificate
-- Generate a Self-Signed Certificate from an Existing Private Key
-- Generate a Self-Signed Certificate from an Existing Private Key and CSR
-- Convert PEM to DER
-- Convert DER to PEM
-- Convert PEM to PKCS7
-- Convert PKCS7 to PEM  
-- Convert PEM to PKCS12
-- Convert PKCS12 to PEM
+The following openssl commands are available. They can be expanded with your custom cheatsheet by editing the file openssl.yaml
+- Command to generate a Private Key and a CSR
+- Command to generate a CSR from an Existing Private Key 
+- Command to generate a CSR from an Existing Certificate and Private Key
+- Command to generate a Self-Signed Certificate
+- Command to generate a Self-Signed Certificate from an Existing Private Key
+- Command to generate a Self-Signed Certificate from an Existing Private Key and CSR
+- Command to convert PEM to DER
+- Command to convert DER to PEM
+- Command to convert PEM to PKCS7
+- Command to convert PKCS7 to PEM  
+- Command to convert PEM to PKCS12
+- Command to convert PKCS12 to PEM
     
 ## Dependencies
 - click
