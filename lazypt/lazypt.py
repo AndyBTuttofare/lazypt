@@ -22,11 +22,11 @@ class RevShell(object):
 
     def _format_code(self):
         try:
-            code = code = self.get_code().format(self._host, self._port)
+            code = self.get_code().format(self._host, self._port)
             pyperclip.copy(code)
             return self._msg
-        except ValueError:
-            code = code = self.get_code() % (self._host, self._port)
+        except:
+            code = self.get_code() % (self._host, self._port)
             pyperclip.copy(code)
             return self._msg
 
@@ -105,7 +105,3 @@ class OpenSSL(object):
             i += 1
                     
         return infos
-        
-
-
-        
