@@ -21,14 +21,13 @@ class RevShell(object):
         return "[-] --lang not found in YAML file."
 
     def _format_code(self):
-        try:
-            code = self.get_code().format(self._host, self._port)
-            pyperclip.copy(code)
-            return self._msg
-        except:
-            code = self.get_code() % (self._host, self._port)
-            pyperclip.copy(code)
-            return self._msg
+
+        code = self.get_code().replace('{ip}', self._host)
+        code = code.replace('{port}', self._port)
+        # code = self.get_code().format(self._host, self._port)
+        pyperclip.copy(code)
+        print(code)
+        return self._msg
 
     def get_data(self, dbfile):
         script_path = path_finder()
